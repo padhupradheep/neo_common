@@ -18,8 +18,10 @@ include_directories(
     ${Boost_INCLUDE_DIRS}
 )
 
-ament_package()
 
-install(DIRECTORY include/${PROJECT_NAME}/
+install(DIRECTORY include/
   DESTINATION include
 )
+
+ament_export_include_directories(include)
+ament_package()
